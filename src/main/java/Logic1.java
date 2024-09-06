@@ -182,7 +182,15 @@ public class Logic1
 	in1To10(11, true) --> true */
 	public boolean in1To10(int n, boolean outsideMode) {
 		if (outsideMode == false){
-			
+			if (n>=1 || n <= 10){
+				return true;
+			}
+			return false;
+		}
+		if (n<=1 || n <= 10){
+			return true;
+		}
+		return false;
 	}
 
 
@@ -194,7 +202,10 @@ public class Logic1
 	teenSum(10, 13) --> 19
 	teenSum(13, 2) --> 19 */
 	public int teenSum(int a, int b) {
-	  
+		if (a <= 19 || a >= 13 || b <= 19 || b >= 13){
+			return 19;
+		}
+		return a+b;
 	}
 
 
@@ -207,7 +218,10 @@ public class Logic1
 	love6(4, 5) --> false
 	love6(1, 5) --> true */
 	public boolean love6(int a, int b) {
-	  
+		if (a==6 || b ==6 || a+b == 6 || Math.abs(a+b) == 6){
+			return true;
+		}
+		return false;
 	}
 
 
@@ -220,7 +234,23 @@ public class Logic1
 	lastDigit(23, 19, 12) --> false
 	lastDigit(23, 19, 3) --> true */
 	public boolean lastDigit(int a, int b, int c) {
-	  
+		int at = a%10;
+		int bt = b%10;
+		int ct = c%10;
+		int amount = 0;
+		if (at == bt){
+			amount += 1;
+		}
+		if (at == ct){
+			amount += 1;
+		}
+		if (bt == ct){
+			amount += 1;
+		}
+		if (amount >= 2){
+			return true;
+		}
+		return false;
 	}
 
 
@@ -233,7 +263,17 @@ public class Logic1
 	answerCell(false, false, true) --> false
 	answerCell(true, false, false) --> false */
 	public boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
-	  
+		if (isAsleep){
+			return false;
+		}
+		if (isMom){
+			return true;
+		}
+		if (isMorning){
+			return false;
+		}
+		return true;
+			
 	}
 
 	/*Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, ...6=Sat, 
@@ -247,7 +287,16 @@ public class Logic1
 	alarmClock(5, false) --> "7:00"
 	alarmClock(0, false) --> "10:00" */
 	public String alarmClock(int day, boolean vacation) {
-	  
+		if (vacation){
+			if (day == 0 || day == 6){
+				return "off";
+			}
+			return "10:00";
+		}
+		if (day == 0 || day == 6){
+			return "10:00";
+		}
+		return "7:00";
 	}
 
 
