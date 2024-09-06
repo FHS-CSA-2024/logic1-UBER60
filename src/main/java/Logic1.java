@@ -311,7 +311,13 @@ public class Logic1
 	teaParty(3, 8) --> 0
 	teaParty(20, 6) --> 2 */
 	public int teaParty(int tea, int candy) {
-	  
+		if (tea >= 5 && candy >= 5){
+			if (tea*2 <= candy || candy*2 <= tea){
+				return 2;
+			}
+			return 1;
+		}
+		return 0;
 	}
 
 
@@ -326,7 +332,10 @@ public class Logic1
 	redTicket(2, 2, 1) --> 0
 	redTicket(0, 0, 0) --> 5 */
 	public int redTicket(int a, int b, int c) {
-	  
+		if (a==2 && b == 2 && c == 2){
+			return 10;
+		}
+		if ()
 	}
 
 
