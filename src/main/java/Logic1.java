@@ -338,7 +338,7 @@ public class Logic1
 		if (a == b && a == c && b == c){
 			return 5;
 		}
-		if (b =! a || a =! c){
+		if (b != a || a != c){
 			return 1;
 		}
 		return 0;
