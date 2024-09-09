@@ -403,7 +403,7 @@ public class Logic1
 	caughtSpeeding(65, false) --> 1
 	caughtSpeeding(65, true) --> 0	*/
 	public int caughtSpeeding(int speed, boolean isBirthday) {
-		int n;
+		int n = 0;
 		if (isBirthday){
 			n = 5;
 		}
