@@ -355,7 +355,13 @@ public class Logic1
 	greenTicket(2, 2, 2) --> 20
 	greenTicket(1, 1, 2) --> 10 */
 	public int greenTicket(int a, int b, int c) {
-	  
+		if (a==b && b == c && a ==c){
+			return 20;
+		}
+		if (a==b || b == c || a ==c){
+			return 10;
+		}
+		return 0;
 	}
 
 
@@ -371,7 +377,16 @@ public class Logic1
 	squirrelPlay(95, false) --> false
 	squirrelPlay(95, true) --> true	*/
 	public boolean squirrelPlay(int temp, boolean isSummer) {
-  
+  		if (isSummer){
+			if (temp >= 60 && temp <= 100){
+				return true;
+			}
+		}else{
+			if (temp >= 60 && temp <= 90){
+				return true;
+			}
+		}
+		return false;
 	}
 
 
