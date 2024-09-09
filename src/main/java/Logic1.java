@@ -335,7 +335,13 @@ public class Logic1
 		if (a==2 && b == 2 && c == 2){
 			return 10;
 		}
-		if ()
+		if (a == b && a == c && b == c){
+			return 5;
+		}
+		if (b =! a || a =! c){
+			return 1;
+		}
+		return 0;
 	}
 
 
