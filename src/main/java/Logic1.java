@@ -475,7 +475,16 @@ public class Logic1
 	sodaParty(50, false) --> true
 	sodaParty(70, true) --> true */
 	public boolean sodaParty(int sodas, boolean isWeekend) {
-  		
+  		if (isWeekend){
+			if (sodas >= 40){
+				return true;
+			}
+		}else{
+			if (sodas >= 40 || sodas <= 60){
+				return true;
+			}
+		}
+		return false;
 	}
 
 }
