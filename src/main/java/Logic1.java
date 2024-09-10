@@ -165,7 +165,7 @@ public class Logic1
 	sortaSum(10, 11) --> 21*/
 	public int sortaSum(int a, int b) {
 		int ans = a + b;
-		if (ans > 9 || ans < 20){
+		if (ans > 9 && ans < 20){
 			ans = 20;
 		}
 		return ans;
@@ -181,13 +181,13 @@ public class Logic1
 	in1To10(11, false) --> false
 	in1To10(11, true) --> true */
 	public boolean in1To10(int n, boolean outsideMode) {
-		if (outsideMode == false){
-			if (n>=1 || n <= 10){
+		if (outsideMode){
+			if (n<=1 || n >= 10){
 				return true;
 			}
 			return false;
 		}
-		if (n<=1 || n <= 10){
+		if (n>=1 && n <= 10){
 			return true;
 		}
 		return false;
@@ -202,7 +202,7 @@ public class Logic1
 	teenSum(10, 13) --> 19
 	teenSum(13, 2) --> 19 */
 	public int teenSum(int a, int b) {
-		if (a <= 19 || a >= 13 || b <= 19 || b >= 13){
+		if ((a <= 19 && a >= 13) || (b <= 19 && b >= 13)){
 			return 19;
 		}
 		return a+b;
@@ -239,15 +239,12 @@ public class Logic1
 		int ct = c%10;
 		int amount = 0;
 		if (at == bt){
-			amount += 1;
+			return true;
 		}
 		if (at == ct){
-			amount += 1;
+			return true;
 		}
 		if (bt == ct){
-			amount += 1;
-		}
-		if (amount >= 2){
 			return true;
 		}
 		return false;
