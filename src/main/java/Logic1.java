@@ -335,7 +335,7 @@ public class Logic1
 		if (a == b && a == c && b == c){
 			return 5;
 		}
-		if (b != a || a != c){
+		if (b != a && a != c){
 			return 1;
 		}
 		return 0;
@@ -477,7 +477,7 @@ public class Logic1
 				return true;
 			}
 		}else{
-			if (sodas >= 40 || sodas <= 60){
+			if (sodas >= 40 && sodas <= 60){
 				return true;
 			}
 		}
